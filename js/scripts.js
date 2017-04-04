@@ -14,11 +14,9 @@ function AcctList() {
 }
 
 AcctList.prototype.updateAcctList = function(userObj) {
-  console.log("this.accountsArray[lastthing]" , this.accountsArray[0]);
   console.log("this.accountsArray : " , this.accountsArray);
-  return this.accountsArray.unshift(userObj);
+  return this.accountsArray.push(userObj);
 }
-
 
 
 // FRONT END
@@ -31,7 +29,7 @@ $(document).ready(function() {
   $("#registerForm").submit(function(e) {
     e.preventDefault();
     var name = $("#name").val();
-    var initialDeposit = $("#initialDeposit").val();
+    var initialDeposit = parseInt($("#initialDeposit").val());
     // console.log("whatever");
     var newAccount = new User(name, initialDeposit);
     // Add new account to master account list
@@ -45,7 +43,8 @@ $(document).ready(function() {
   $("#interactForm").click(function() {
     var depositInput = parseInt($("#deposit-amount").val());
     var withdrawalInput = parseInt($("#withdrawal-amount").val());
-    var newBalance = newAcctList.updateAccountList[0].updateUserAccount(depositInput, withdrawalInput);
+    var newBalance = newAcctList.accountsArray[0].updateUserAccount(depositInput, withdrawalInput);
+    $("span#current-balance").text("");
     $("span#current-balance").append("$" + newBalance);
   });
 
