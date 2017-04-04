@@ -1,0 +1,24 @@
+
+.row #row1 {
+  /*width: 94%;*/
+  position: absolute;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.row #row2 {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.col-xs-5 {
+  background-color: rgb(220, 247, 205);
+  border-style: solid;
+  border-color: rgb(3, 56, 9);
+  border-radius: 8%;
+  border-width: 2px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 350px;
+}
