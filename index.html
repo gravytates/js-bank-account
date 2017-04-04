@@ -24,41 +24,41 @@
         </div>
         <!-- col 2 -->
         <div class="col-xs-5">
-          <form class="registerForm">
+          <form id="registerForm">
             <div class="form-group">
               <h2>Create your account</h2>
               <p>
                 Thank you for choosing Your $$ is our$. Please submit your name and initial deposit amount below to set up your account.
               </p>
               <label for="name">Name</label><br>
-              <input type="text" id="name">
+              <input type="text" id="name" placeholder="Your Name">
             </div>
 
             <div class="form-group">
               <label for="initialDesposit">Initial Deposit</label><br>
-              <input type="number" id="initialDeposit">
+              <input type="number" value="0.00" id="initialDeposit">
             </div>
 
-            <button type="button" class="btn btn-info">Create Account</button>
+            <button type="submit" class="btn btn-info">Create Account</button>
 
           </form>
         </div>
 
         <!-- col 4 -->
         <div class="col-xs-5">
-          <form class="interactForm">
+          <form id="interactForm">
             <div class="form-group">
               <h2>Exchange</h2>
               <p>
                 Please enter an amount you would like to desposit or withdraw from your account.
               </p>
               <label for="name">Deposit Amount</label><br>
-              <input type="number" id="deposit-amount">
+              <input type="number" value="0.00"  id="deposit-amount">
             </div>
 
             <div class="form-group">
               <label for="initialDesposit">Withdrawal Amount</label><br>
-              <input type="number" id="withdrawal-amount">
+              <input type="number" value="0.00" id="withdrawal-amount">
             </div>
 
             <button type="button" class="btn btn-info">Move money</button>
@@ -74,8 +74,10 @@
       <div id="row2" class="row">
         <div class="col-xs-1">
         </div>
-        <div class="col-xs-10">
+        <div id="balance" class="col-xs-5">
           <h3>Current Balance: <span id="current-balance"></span></h3>
+        </div>
+        <div class="col-xs-5">
         </div>
         <div class="col-xs-1">
         </div>
