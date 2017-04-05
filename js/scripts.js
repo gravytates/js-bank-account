@@ -14,7 +14,7 @@ function AcctList() {
 }
 
 AcctList.prototype.updateAcctList = function(userObj) {
-  console.log("this.accountsArray : " , this.accountsArray);
+  // console.log("this.accountsArray : " , this.accountsArray);
   return this.accountsArray.push(userObj);
 }
 
@@ -24,7 +24,6 @@ $(document).ready(function() {
 
   // create master account list
   var newAcctList = new AcctList();
-
 
   $("#registerForm").submit(function(e) {
     e.preventDefault();
